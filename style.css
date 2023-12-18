@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color:rgb(11, 0, 34);
+}
+
+i,svg{
+    pointer-events: none;
+}
+
+.kick-pad, .snare-pad, .hihat-pad{
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-pad{
+    background: rgb(20, 55, 13);
+    
+}
+.hihat-pad{
+    background: rgb(92, 25, 123);
+}
+.snare-pad{
+    background: rgb(157, 96, 4);
+}
+
+.kick-pad.active{
+    background: rgb(14, 131, 64);
+
+}
+.hihat-pad.active{
+    background: rgb(190, 9, 255);
+
+}
+.snare-pad.active{
+    background: rgb(255, 157, 0);
+
+}
+
+.sequencer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+.controls button {
+  padding: 0.7rem;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: white;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+
+.pad {
+  transition: all 0.5s ease;
+}
+  
+.play {
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  background: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+  select {
+    padding: .7rem;
+    font-size: .7rem;
+  }
+.mute.active {
+  background: rgb(182, 182, 182);
+}
+  
+  .tempo {
+    margin: .5rem;
+    width: 30%;
+  }
+  .tempo-slider {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: .7rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+  .tempo p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  @keyframes playTrack {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
